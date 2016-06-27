@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+<script>
+function makeFunc(){
+  var name = "maoda",
+      count = 0;
+  
+  function displayName(){
+    console.log(name + count);
+    count++;
+  }
+  return displayName;
+}
+
+var func = makeFunc();
+func();
+func();
+</script>
+</body>
+</html>
+

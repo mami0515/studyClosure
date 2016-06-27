@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+<script>
+var module = (function(){
+  var name = "maoda",
+      count = 0,
+      value = "aaaaa";
+  
+  function displayName(){
+    console.log(name + count);
+    count++;
+  }
+  return {
+    init: function(){
+    },
+    show: function(){
+      console.log(value);
+    },  
+    set: function(param){
+      value = param;
+    },
+    get: function(){
+      return value;
+    },
+    displayName: function(){
+      displayName();
+    },
+    version: "1.0.0",
+    licence: "MIT"
+  };
+})();
+
+module.set("bbbbb");
+module.show();
+console.log(module.get());
+console.log(module.version);
+module.displayName();
+module.displayName();
+</script>
+</body>
+</html>
+
